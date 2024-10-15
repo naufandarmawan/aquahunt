@@ -22,7 +22,7 @@ This is a Next.js web application for managing fish species data, built with Typ
 
 3. Create a `.env.local` file in the root directory and add the following environment variables:
    ```
-   NEXT_PUBLIC_API_URL=https://test.api.sahabatlautlestari.com
+   NEXT_PUBLIC_API_URL=your_api_url
    ```
 
 4. Run the development server:

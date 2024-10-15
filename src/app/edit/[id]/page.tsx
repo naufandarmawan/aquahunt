@@ -35,7 +35,7 @@ export default function EditSpecies({ params }: EditSpeciesProps) {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        `https://test.api.sahabatlautlestari.com/species/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/species/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -62,7 +62,7 @@ export default function EditSpecies({ params }: EditSpeciesProps) {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        `https://test.api.sahabatlautlestari.com/species/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/species/${id}`,
         {
           method: "PUT",
           headers: {

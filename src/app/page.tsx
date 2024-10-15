@@ -25,11 +25,11 @@ export default function Home() {
 
       if (searchTerm) {
         response = await fetch(
-          `https://test.api.sahabatlautlestari.com/species?Keyword=${searchTerm}&PageNumber=${currentPage}&PageSize=10`
+          `${process.env.NEXT_PUBLIC_API_URL}/species?Keyword=${searchTerm}&PageNumber=${currentPage}&PageSize=10`
         );
       } else {
         response = await fetch(
-          `https://test.api.sahabatlautlestari.com/species?PageNumber=${currentPage}&PageSize=10`
+          `${process.env.NEXT_PUBLIC_API_URL}/species?PageNumber=${currentPage}&PageSize=10`
         );
       }
 

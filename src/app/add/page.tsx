@@ -30,7 +30,7 @@ export default function AddSpecies() {
     try {
       const token = localStorage.getItem("accessToken");
       const response = await fetch(
-        "https://test.api.sahabatlautlestari.com/species",
+        `${process.env.NEXT_PUBLIC_API_URL}/species`,
         {
           method: "POST",
           headers: {

@@ -11,7 +11,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://test.api.sahabatlautlestari.com/auth/login",
+        `${process.env.NEXT_PUBLIC_API_URL}/auth/login`,
         {
           method: "POST",
           headers: {

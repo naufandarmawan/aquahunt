@@ -17,7 +17,7 @@ export default function SpeciesDetail({ params }: SpeciesDetailProps) {
     const fetchSpecies = async () => {
       try {
         const response = await fetch(
-          `https://test.api.sahabatlautlestari.com/species/${params.id}`
+          `${process.env.NEXT_PUBLIC_API_URL}/species/${params.id}`
         );
         if (!response.ok) {
           throw new Error("Species not found");

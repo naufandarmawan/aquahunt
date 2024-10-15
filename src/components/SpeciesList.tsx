@@ -17,7 +17,7 @@ export default function SpeciesList({
       try {
         const token = localStorage.getItem("accessToken");
         const response = await fetch(
-          `https://test.api.sahabatlautlestari.com/species/${id}`,
+          `${process.env.NEXT_PUBLIC_API_URL}/species/${id}`,
           {
             method: "DELETE",
             headers: {
